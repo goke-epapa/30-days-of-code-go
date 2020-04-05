@@ -1,11 +1,11 @@
 package main
 
 import (
-	"fmt"
-	"os"
 	"bufio"
-	"strconv"
+	"fmt"
 	"io"
+	"os"
+	"strconv"
 	"strings"
 )
 
@@ -14,28 +14,28 @@ Given an integer, i, print its first 10 multiples. Each multiple n x i (where 1 
 */
 
 func main() {
-    reader := bufio.NewReaderSize(os.Stdin, 1024 * 1024)
+	reader := bufio.NewReaderSize(os.Stdin, 1024*1024)
 
-    nTemp, err := strconv.ParseInt(readLine(reader), 10, 64)
-    checkError(err)
+	nTemp, err := strconv.ParseInt(readLine(reader), 10, 64)
+	checkError(err)
 	n := int32(nTemp)
-	
+
 	for i := 1; i <= 10; i++ {
 		fmt.Printf("%d x %d = %d\n", n, i, (n * int32(i)))
 	}
 }
 
 func readLine(reader *bufio.Reader) string {
-    str, _, err := reader.ReadLine()
-    if err == io.EOF {
-        return ""
-    }
+	str, _, err := reader.ReadLine()
+	if err == io.EOF {
+		return ""
+	}
 
-    return strings.TrimRight(string(str), "\r\n")
+	return strings.TrimRight(string(str), "\r\n")
 }
 
 func checkError(err error) {
-    if err != nil {
-        panic(err)
-    }
+	if err != nil {
+		panic(err)
+	}
 }

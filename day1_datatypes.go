@@ -48,7 +48,7 @@ func main() {
 	fmt.Println(i + i2)
 
 	// Print the sum of the double variables on a new line.
-	fmt.Println(strconv.FormatFloat(d + d2, 'f', 1, 64))
+	fmt.Println(strconv.FormatFloat(d+d2, 'f', 1, 64))
 
 	// Concatenate and print the String variables on a new line
 	// The 's' variable above should be printed first.

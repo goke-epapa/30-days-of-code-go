@@ -32,7 +32,7 @@ func main() {
 	}
 
 	var out string
-	if i % 2 != 0 || i >= 6 && i <= 20 {
+	if i%2 != 0 || i >= 6 && i <= 20 {
 		out = "Weird"
 	} else {
 		out = "Not Weird"
